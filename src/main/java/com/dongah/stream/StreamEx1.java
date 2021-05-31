@@ -1,11 +1,16 @@
 package com.dongah.stream;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
 public class StreamEx1 {
     public static void main(String[] args) {
-        System.out.println("hello World1");
-        System.out.println("Hello World2");
-        System.out.println("Hello World3");
-        System.out.println("Hello World4");
-        System.out.println("Hello World5");
+        List<String> names = Arrays.asList("Eric", "Elena", "Java");
+
+        Stream<String> stream = names.stream()
+                .filter(name -> name.contains("l"));
+
+        stream.forEach(System.out::println);
     }
 }
