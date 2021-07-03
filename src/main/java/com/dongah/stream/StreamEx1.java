@@ -6,11 +6,10 @@ import java.util.stream.Stream;
 
 public class StreamEx1 {
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Eric", "Elena", "Java");
+        int dumCnt = Math.floorDiv(3, 2 + 1);
+        int notCnt = Math.floorMod(3, 2 + 1);
 
-        Stream<String> stream = names.stream()
-                .filter(name -> name.contains("l"));
-
-        stream.forEach(System.out::println);
+        System.out.println("dumCnt => " + dumCnt);
+        System.out.println("notCnt => " + notCnt);
     }
 }
