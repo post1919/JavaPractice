@@ -3,17 +3,17 @@ package com.dongah.pattern;
 import lombok.Getter;
 
 @Getter
-public class UserInfo {
+public class UserInfo2 {
     private String userId;
     private String userName;
     private String password;
-    private String email;
+    private String nickname;
 
-    public UserInfo(UserInfoBuilder userInfoBuilder) {
-        this.userId = userInfoBuilder.userId;
-        this.userName = userInfoBuilder.userName;
-        this.password = userInfoBuilder.password;
-        this.email = userInfoBuilder.email;
+    private UserInfo2(UserInfoBuilder builder){
+        userId = builder.userId;
+        userName = builder.userName;
+        password = builder.password;
+        nickname = builder.nickname;
     }
 
     public static UserInfoBuilder builder(){
@@ -24,7 +24,7 @@ public class UserInfo {
         private String userId;
         private String userName;
         private String password;
-        private String email;
+        private String nickname;
 
         public UserInfoBuilder userId(String userId){
             this.userId = userId;
@@ -41,13 +41,13 @@ public class UserInfo {
             return this;
         }
 
-        public UserInfoBuilder email(String email){
-            this.email = email;
+        public UserInfoBuilder nickname(String nickname){
+            this.nickname = nickname;
             return this;
         }
 
-        public UserInfo build(){
-            return new UserInfo(this);
+        public UserInfo2 build(){
+            return new UserInfo2(this);
         }
     }
 }
