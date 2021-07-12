@@ -1,5 +1,9 @@
 package com.dongah.stream;
 
+import com.google.gson.Gson;
+
+import java.util.Map;
+
 public class map {
     public static void main(String[] args) {
         String jsonStr = "{\n" +
@@ -32,8 +36,14 @@ public class map {
                 "\t\"cpnBoxVersion\": \"V2\"\n" +
                 "}";
 
-        System.out.println("jsonStr=> " + jsonStr);
+//        System.out.println("jsonStr=> " + jsonStr);
+        Gson gson = new Gson();
+        Map<String, Object> map = gson.fromJson(jsonStr, Map.class);
+        map.forEach((k,v)->{
+            System.out.format("key=>%s, value=>%s\n", k, v);
+        });
 
+        map.entrySet().stream().forEach(System.out::println);
     }
 }
 
