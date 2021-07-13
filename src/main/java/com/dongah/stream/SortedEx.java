@@ -5,7 +5,10 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SortedEx {
     public static void main(String[] args) {
@@ -40,17 +43,15 @@ public class SortedEx {
                 //"}";
 
         Gson gson = new Gson();
-        try {
-            List<ProductFavorCommonReqModel> modelList = gson.fromJson(jsonStr.toString(), new TypeToken<List<ProductFavorCommonReqModel>>(){}.getType());
+        List<ProductFavorCommonReqModel> modelList = gson.fromJson(jsonStr, new TypeToken<List<ProductFavorCommonReqModel>>(){}.getType());
+        List<ProductFavorCommonReqModel> list = modelList.stream()
+            .filter(n->n.getSlQty() > 2)
+            //.sorted(Collections.reverseOrder(Comparator.comparing(ProductFavorCommonReqModel::getSpdNo)))
+            .sorted(Comparator.comparing(ProductFavorCommonReqModel::getSpdNo))
+            .collect(Collectors.toList());
 
-            modelList.stream().forEach(n -> System.out.println(n.getSpdNo()));
-            System.out.println("============================================");
-            modelList.stream().filter(n->n.getSlQty().equals(1))
-            .forEach(n-> System.out.println(n.getSpdNo()));
-            System.out.println("============================================");
-            modelList.stream().map(n->n.getSpdNo().toLowerCase()).forEach(n-> System.out.println(n));
-        } catch(JsonSyntaxException ex){
-            ex.printStackTrace();
-        }
+        list.forEach(n->{
+            System.out.println(n.getSpdNo());
+        });
     }
 }
