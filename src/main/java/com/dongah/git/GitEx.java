@@ -5,4 +5,6 @@ public class GitEx {
         System.out.println("GIT-0002 브랜치에서 작성");
         System.out.println("develop브랜치에 Merge");
     }
+
+    public void git0001(){}
 }
