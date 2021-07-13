@@ -8,4 +8,6 @@ public class GitEx {
     public void git0001(){}
 
     public void git0002(){}
+
+    public void git0002_2(){}
 }
