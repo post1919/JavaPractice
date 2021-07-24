@@ -8,4 +8,8 @@ public class GitEx {
     public void git0001(){}
 
     public void git0002(){}
+
+    public void onri00001(){
+        System.out.println("ONRI-00001");
+    }
 }
