@@ -12,4 +12,8 @@ public class GitEx {
     public void onri00001(){
         System.out.println("ONRI-00001");
     }
+
+    public void onri00002(){
+        System.out.println("ONRI-00002");
+    }
 }
