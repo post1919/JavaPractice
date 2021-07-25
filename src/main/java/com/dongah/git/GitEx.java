@@ -14,4 +14,8 @@ public class GitEx {
         System.out.println("ONRI-00001");
         System.out.println("ONRI-00001 변경");
     }
+
+    public void onri00002(){
+        System.out.println("ONRI-00002");
+    }
 }
