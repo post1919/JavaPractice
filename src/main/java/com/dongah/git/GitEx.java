@@ -13,6 +13,6 @@ public class GitEx {
 
     public void onri00001(){
         System.out.println("ONRI-00001");
-        System.out.println("ONRI-00001 추가");
+        System.out.println("ONRI-00001 변경");
     }
 }
