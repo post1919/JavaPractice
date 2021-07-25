@@ -3,6 +3,7 @@ package com.dongah.git;
 public class GitEx {
     public static void main(String[] args) {
         System.out.println("master");
+        System.out.println("master추가");
     }
 
     public void git0001(){}
