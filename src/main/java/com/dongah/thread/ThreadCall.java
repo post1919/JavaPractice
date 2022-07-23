@@ -13,4 +13,12 @@ public class ThreadCall implements Runnable {
             e.printStackTrace();
         }
     }
+
+    public void function1(){
+
+    }
+
+    public void function2(){
+
+    }
 }
