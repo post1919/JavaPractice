@@ -8,6 +8,7 @@ public class ThreadCall implements Runnable {
 
             //feature/B 기능1
             //feature/B 기능2
+            //feature/B 기능3
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
