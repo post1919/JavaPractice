@@ -7,6 +7,7 @@ public class ThreadCall implements Runnable {
             Thread.sleep(100); // 0.1초간 스레드를 멈춤.
 
             //feature/B 기능1
+            //feature/B 기능2
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
