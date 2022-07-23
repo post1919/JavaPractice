@@ -17,4 +17,8 @@ public class ThreadCall implements Runnable {
     public void function1(){
 
     }
+
+    public void function2(){
+
+    }
 }
