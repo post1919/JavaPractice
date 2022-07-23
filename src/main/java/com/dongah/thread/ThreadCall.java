@@ -18,6 +18,7 @@ public class ThreadCall implements Runnable {
 
     public void function1(){
         System.out.println("Master에서 기능 추가");
+
     }
 
     public void function2(){
