@@ -1,7 +1,5 @@
 package com.dongah.thread;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 public class ThreadCall implements Runnable {
     @Override
     public void run() {
@@ -14,13 +12,5 @@ public class ThreadCall implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    public void function1(){
-        System.out.println("Master에서 기능 추가");
-    }
-
-    public void function2(){
-
     }
 }
